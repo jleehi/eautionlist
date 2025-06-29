@@ -4,7 +4,7 @@
     "avg_price": 155870917,
     "min_price": 4694000,
     "max_price": 588700000,
-    "last_updated": "2025-06-29 10:14:09"
+    "last_updated": "2025-06-29 10:35:37"
   },
   "region_analysis": {
     "서울시": {
@@ -2105,7 +2105,7 @@
       "pnu": "1117013000102530007",
       "price": 380000000,
       "pushed": "Y",
-      "realcount": 19819,
+      "realcount": 19820,
       "realpercent": 20,
       "region": "서울시",
       "requesetdata": "2024-12-09",
@@ -2349,7 +2349,7 @@
       "percent": 21,
       "pnu": "1168010100106050017",
       "pushed": "Y",
-      "realcount": 2080,
+      "realcount": 2082,
       "region": "서울시",
       "requestupdate": "N",
       "s3_auctionclaim_uid": 384273,
@@ -2464,7 +2464,7 @@
       "percent": 21,
       "pnu": "1141011700101950009",
       "pushed": "Y",
-      "realcount": 6950,
+      "realcount": 6951,
       "region": "서울시",
       "requesetdata": "2024-11-13",
       "requestupdate": "N",
