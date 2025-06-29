@@ -1,4 +1,18 @@
-   requests==2.28.1
-   beautifulsoup4==4.11.1
-   firebase-admin==6.0.1
-   python-dotenv==0.21.0
+requests==2.28.1
+beautifulsoup4==4.11.1
+firebase-admin==6.0.1
+python-dotenv==0.21.0
+schedule==1.1.0
+# 웹 크롤링 관련
+lxml==4.9.2
+# 데이터 처리 관련
+pandas==1.5.3
+numpy==1.24.2
+# 시각화 관련
+matplotlib==3.7.1
+seaborn==0.12.2
+# 지도 관련
+folium==0.14.0
+# 기타 유틸리티
+tqdm==4.65.0
+pytz==2023.3
