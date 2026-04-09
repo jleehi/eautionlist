@@ -1,21 +1,22 @@
 {
   "basic_stats": {
-    "total_count": 47,
-    "avg_price": 133205511,
+    "total_count": 46,
+    "avg_price": 138148029,
     "min_price": 475000,
     "max_price": 568977000,
-    "last_updated": "2026-04-08 16:09:53"
+    "last_updated": "2026-04-09 16:13:34"
   },
   "region_analysis": {
     "서울시": {
-      "count": 8,
+      "count": 9,
       "property_types": {
         "아파트": 3,
-        "오피스텔": 5
+        "오피스텔": 5,
+        "아파트,대지": 1
       },
-      "avg_price": 10584750,
+      "avg_price": 47364222,
       "min_price": 3884000,
-      "max_price": 22764000,
+      "max_price": 341600000,
       "subregions": {
         "광진구": {
           "count": 2,
@@ -34,6 +35,12 @@
           "avg_price": 8514000,
           "min_price": 8514000,
           "max_price": 8514000
+        },
+        "서대문구": {
+          "count": 1,
+          "avg_price": 341600000,
+          "min_price": 341600000,
+          "max_price": 341600000
         },
         "은평구": {
           "count": 1,
@@ -62,20 +69,19 @@
       }
     },
     "경기도": {
-      "count": 39,
+      "count": 37,
       "property_types": {
-        "아파트": 10,
-        "대지,단독주택": 9,
-        "단독주택": 1,
-        "오피스텔": 11,
-        "단독주택,대지,창고시설": 1,
+        "아파트": 13,
+        "대지,단독주택": 6,
+        "단독주택": 2,
+        "오피스텔": 10,
         "단독주택,대지": 2,
-        "단독주택,대지,도로": 2,
+        "단독주택,대지,도로": 1,
+        "다가구주택,대지": 1,
         "단독주택,전": 1,
-        "대지,단독주택,도로,주차장": 1,
         "대지,전,단독주택": 1
       },
-      "avg_price": 158358488,
+      "avg_price": 160230577,
       "min_price": 475000,
       "max_price": 568977000,
       "subregions": {
@@ -86,8 +92,8 @@
           "max_price": 553582000
         },
         "안양시": {
-          "count": 4,
-          "avg_price": 52965750,
+          "count": 6,
+          "avg_price": 88380833,
           "min_price": 1747000,
           "max_price": 197120000
         },
@@ -104,22 +110,22 @@
           "max_price": 9912000
         },
         "화성시": {
-          "count": 4,
-          "avg_price": 17326000,
+          "count": 5,
+          "avg_price": 23973800,
           "min_price": 475000,
           "max_price": 64203000
         },
-        "이천시": {
-          "count": 1,
-          "avg_price": 159587000,
-          "min_price": 159587000,
-          "max_price": 159587000
+        "용인시": {
+          "count": 5,
+          "avg_price": 269687736,
+          "min_price": 31596184,
+          "max_price": 562100000
         },
         "양평군": {
-          "count": 7,
-          "avg_price": 163515857,
-          "min_price": 9057000,
-          "max_price": 322324000
+          "count": 1,
+          "avg_price": 149301000,
+          "min_price": 149301000,
+          "max_price": 149301000
         },
         "의왕시": {
           "count": 1,
@@ -134,20 +140,20 @@
           "max_price": 94599000
         },
         "수원시": {
-          "count": 3,
-          "avg_price": 191053666,
+          "count": 2,
+          "avg_price": 284919500,
           "min_price": 862000,
           "max_price": 568977000
         },
-        "용인시": {
-          "count": 4,
-          "avg_price": 218284671,
-          "min_price": 31596184,
-          "max_price": 562100000
+        "군포시": {
+          "count": 1,
+          "avg_price": 50835000,
+          "min_price": 50835000,
+          "max_price": 50835000
         },
         "평택시": {
-          "count": 2,
-          "avg_price": 156622185,
+          "count": 3,
+          "avg_price": 109630562,
           "min_price": 10452000,
           "max_price": 302792370
         },
@@ -262,17 +268,17 @@
         },
         {
           "region": "경기도 화성시",
+          "property_type": "단독주택",
+          "price": 50565000,
+          "address": "",
+          "uid": 567632
+        },
+        {
+          "region": "경기도 화성시",
           "property_type": "오피스텔",
           "price": 841000,
           "address": "경기도 화성시 동탄대로 495",
           "uid": 487236
-        },
-        {
-          "region": "경기도 양평군",
-          "property_type": "대지,단독주택",
-          "price": 54460000,
-          "address": "",
-          "uid": 576783
         },
         {
           "region": "경기도 안양시",
@@ -289,11 +295,11 @@
           "uid": 595332
         },
         {
-          "region": "경기도 수원시",
-          "property_type": "오피스텔",
-          "price": 3322000,
-          "address": "경기도 수원시 권선구 금곡로196번길 15",
-          "uid": 425828
+          "region": "경기도 군포시",
+          "property_type": "아파트",
+          "price": 50835000,
+          "address": "",
+          "uid": 564650
         },
         {
           "region": "경기도 안양시",
@@ -345,13 +351,6 @@
           "uid": 571895
         },
         {
-          "region": "경기도 양평군",
-          "property_type": "대지,단독주택",
-          "price": 9057000,
-          "address": "",
-          "uid": 585987
-        },
-        {
           "region": "경기도 연천군",
           "property_type": "단독주택,대지",
           "price": 12610000,
@@ -373,6 +372,13 @@
           "uid": 515848
         },
         {
+          "region": "경기도 화성시",
+          "property_type": "아파트",
+          "price": 64203000,
+          "address": "경기도 화성시 봉담읍 동화새터길 55-39",
+          "uid": 593547
+        },
+        {
           "region": "경기도 수원시",
           "property_type": "오피스텔",
           "price": 862000,
@@ -380,11 +386,11 @@
           "uid": 513853
         },
         {
-          "region": "경기도 화성시",
+          "region": "경기도 평택시",
           "property_type": "아파트",
-          "price": 64203000,
-          "address": "경기도 화성시 봉담읍 동화새터길 55-39",
-          "uid": 593547
+          "price": 15647317,
+          "address": "경기도 평택시 원평로25번길 63",
+          "uid": 566189
         }
       ]
     },
@@ -401,11 +407,11 @@
           "uid": 478279
         },
         {
-          "region": "경기도 이천시",
-          "property_type": "단독주택,대지,창고시설",
-          "price": 159587000,
+          "region": "경기도 안양시",
+          "property_type": "대지,단독주택",
+          "price": 175950000,
           "address": "",
-          "uid": 482655
+          "uid": 550854
         },
         {
           "region": "경기도 양평군",
@@ -422,18 +428,18 @@
           "uid": 500031
         },
         {
-          "region": "경기도 양평군",
-          "property_type": "대지,단독주택",
-          "price": 162413000,
+          "region": "경기도 안양시",
+          "property_type": "다가구주택,대지",
+          "price": 142472000,
           "address": "",
-          "uid": 604848
+          "uid": 584889
         }
       ]
     },
     "2억~3억": {
       "min": 200000000,
       "max": 300000000,
-      "count": 5,
+      "count": 3,
       "items": [
         {
           "region": "경기도 성남시",
@@ -450,25 +456,11 @@
           "uid": 592701
         },
         {
-          "region": "경기도 양평군",
-          "property_type": "단독주택,대지,도로",
-          "price": 238547000,
-          "address": "",
-          "uid": 604856
-        },
-        {
           "region": "경기도 고양시",
           "property_type": "대지,단독주택",
           "price": 228669000,
           "address": "",
           "uid": 604810
-        },
-        {
-          "region": "경기도 양평군",
-          "property_type": "대지,단독주택",
-          "price": 208509000,
-          "address": "",
-          "uid": 603154
         }
       ]
     },
@@ -477,6 +469,13 @@
       "max": 400000000,
       "count": 5,
       "items": [
+        {
+          "region": "서울시 서대문구",
+          "property_type": "아파트,대지",
+          "price": 341600000,
+          "address": "",
+          "uid": 503662
+        },
         {
           "region": "경기도 성남시",
           "property_type": "대지,단독주택",
@@ -490,13 +489,6 @@
           "price": 370300000,
           "address": "",
           "uid": 598468
-        },
-        {
-          "region": "경기도 양평군",
-          "property_type": "대지,단독주택,도로,주차장",
-          "price": 322324000,
-          "address": "",
-          "uid": 543761
         },
         {
           "region": "경기도 파주시",
@@ -517,8 +509,16 @@
     "4억~5억": {
       "min": 400000000,
       "max": 500000000,
-      "count": 0,
-      "items": []
+      "count": 1,
+      "items": [
+        {
+          "region": "경기도 용인시",
+          "property_type": "아파트",
+          "price": 475300000,
+          "address": "경기도 용인시 수지구 상현로 2",
+          "uid": 466996
+        }
+      ]
     },
     "5억~6억": {
       "min": 500000000,
@@ -564,50 +564,50 @@
   },
   "property_analysis": {
     "아파트": {
-      "count": 13,
-      "avg_price": 144914038,
+      "count": 16,
+      "avg_price": 151604051,
       "min_price": 2551000,
       "max_price": 562100000,
       "regions": {
         "서울시": 3,
-        "경기도": 10
+        "경기도": 13
       }
     },
     "오피스텔": {
-      "count": 16,
-      "avg_price": 13922062,
+      "count": 15,
+      "avg_price": 14628733,
       "min_price": 475000,
       "max_price": 104000000,
       "regions": {
         "서울시": 5,
-        "경기도": 11
+        "경기도": 10
+      }
+    },
+    "아파트,대지": {
+      "count": 1,
+      "avg_price": 341600000,
+      "min_price": 341600000,
+      "max_price": 341600000,
+      "regions": {
+        "서울시": 1
       }
     },
     "대지,단독주택": {
-      "count": 9,
-      "avg_price": 267332666,
-      "min_price": 9057000,
+      "count": 6,
+      "avg_price": 357917500,
+      "min_price": 175950000,
       "max_price": 568977000,
       "regions": {
-        "경기도": 9
+        "경기도": 6
       }
     },
     "단독주택": {
-      "count": 1,
-      "avg_price": 9912000,
+      "count": 2,
+      "avg_price": 30238500,
       "min_price": 9912000,
-      "max_price": 9912000,
+      "max_price": 50565000,
       "regions": {
-        "경기도": 1
-      }
-    },
-    "단독주택,대지,창고시설": {
-      "count": 1,
-      "avg_price": 159587000,
-      "min_price": 159587000,
-      "max_price": 159587000,
-      "regions": {
-        "경기도": 1
+        "경기도": 2
       }
     },
     "단독주택,대지": {
@@ -620,12 +620,21 @@
       }
     },
     "단독주택,대지,도로": {
-      "count": 2,
-      "avg_price": 193924000,
+      "count": 1,
+      "avg_price": 149301000,
       "min_price": 149301000,
-      "max_price": 238547000,
+      "max_price": 149301000,
       "regions": {
-        "경기도": 2
+        "경기도": 1
+      }
+    },
+    "다가구주택,대지": {
+      "count": 1,
+      "avg_price": 142472000,
+      "min_price": 142472000,
+      "max_price": 142472000,
+      "regions": {
+        "경기도": 1
       }
     },
     "단독주택,전": {
@@ -633,15 +642,6 @@
       "avg_price": 31596184,
       "min_price": 31596184,
       "max_price": 31596184,
-      "regions": {
-        "경기도": 1
-      }
-    },
-    "대지,단독주택,도로,주차장": {
-      "count": 1,
-      "avg_price": 322324000,
-      "min_price": 322324000,
-      "max_price": 322324000,
       "regions": {
         "경기도": 1
       }
@@ -658,7 +658,6 @@
   },
   "trend_analysis": {
     "dates": [
-      "2026-03-10",
       "2026-03-11",
       "2026-03-12",
       "2026-03-13",
@@ -687,10 +686,10 @@
       "2026-04-05",
       "2026-04-06",
       "2026-04-07",
-      "2026-04-08"
+      "2026-04-08",
+      "2026-04-09"
     ],
     "daily_counts": [
-      56,
       54,
       55,
       56,
@@ -719,10 +718,10 @@
       46,
       46,
       47,
-      46
+      46,
+      45
     ],
     "daily_avg_prices": [
-      183196546,
       168236085,
       182154338,
       177966671,
@@ -751,24 +750,10 @@
       119369510,
       120935358,
       133205511,
-      138148029
+      138148029,
+      118165555
     ],
     "daily_property_types": [
-      {
-        "오피스텔": 13,
-        "아파트": 21,
-        "단독주택": 5,
-        "임야,대지,단독주택,도로": 1,
-        "대지,단독주택": 7,
-        "단독주택,대지,창고시설": 1,
-        "도로,임야,단독주택": 1,
-        "단독주택,대지,도로": 2,
-        "다가구주택,대지": 1,
-        "단독주택,다가구주택": 1,
-        "단독주택,대지": 1,
-        "단독주택,전": 1,
-        "대지,단독주택,도로": 1
-      },
       {
         "오피스텔": 14,
         "아파트": 20,
@@ -1165,15 +1150,21 @@
         "다가구주택,대지": 1,
         "단독주택,전": 1,
         "대지,전,단독주택": 1
+      },
+      {
+        "아파트": 15,
+        "오피스텔": 16,
+        "아파트,대지": 1,
+        "대지,단독주택": 5,
+        "단독주택": 3,
+        "단독주택,대지": 2,
+        "단독주택,대지,도로": 1,
+        "다가구주택,대지": 1,
+        "단독주택,전": 1
       }
     ],
     "price_trend_by_region": {
       "서울시": [
-        {
-          "date": "2026-03-10",
-          "avg_price": 106090142,
-          "count": 14
-        },
         {
           "date": "2026-03-11",
           "avg_price": 95943230,
@@ -1318,14 +1309,14 @@
           "date": "2026-04-08",
           "avg_price": 47364222,
           "count": 9
+        },
+        {
+          "date": "2026-04-09",
+          "avg_price": 47364222,
+          "count": 9
         }
       ],
       "경기도": [
-        {
-          "date": "2026-03-10",
-          "avg_price": 208898681,
-          "count": 42
-        },
         {
           "date": "2026-03-11",
           "avg_price": 191158210,
@@ -1470,6 +1461,11 @@
           "date": "2026-04-08",
           "avg_price": 160230577,
           "count": 37
+        },
+        {
+          "date": "2026-04-09",
+          "avg_price": 135865888,
+          "count": 36
         }
       ]
     }
@@ -1490,7 +1486,7 @@
       "keywords": "아파트",
       "court_name": "서울동부지방법원",
       "auction_date": "2026-04-13",
-      "d_day": "D-5",
+      "d_day": "D-4",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -1516,7 +1512,7 @@
       "keywords": "오피스텔",
       "court_name": "서울중앙지방법원",
       "auction_date": "2026-04-16",
-      "d_day": "D-8",
+      "d_day": "D-7",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -1542,7 +1538,7 @@
       "keywords": "오피스텔",
       "court_name": "서울중앙지방법원",
       "auction_date": "2026-04-22",
-      "d_day": "D-14",
+      "d_day": "D-13",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -1551,6 +1547,32 @@
       "minprice_num": 8514000,
       "appraisal_price_num": 0,
       "auction_count_num": 15,
+      "price_ratio_num": 0
+    },
+    {
+      "uid": 503662,
+      "region": "서울시",
+      "subregion": "서대문구",
+      "full_region": "서울시 서대문구",
+      "address": "서울특별시 서대문구 충정로7길 9",
+      "minprice": 341600000,
+      "minprice_formatted": "3억 4천만원",
+      "appraisal_price": 0,
+      "appraisal_price_formatted": "정보없음",
+      "price_ratio": "정보없음",
+      "auction_count": 2,
+      "keywords": "아파트,대지",
+      "court_name": "서울서부지방법원",
+      "auction_date": "2026-05-12",
+      "d_day": "D-33",
+      "property_type": "아파트,대지",
+      "building_type": "",
+      "area": "",
+      "floor": "",
+      "total_floor": "",
+      "minprice_num": 341600000,
+      "appraisal_price_num": 0,
+      "auction_count_num": 2,
       "price_ratio_num": 0
     },
     {
@@ -1568,7 +1590,7 @@
       "keywords": "아파트",
       "court_name": "서울서부지방법원",
       "auction_date": "2026-04-14",
-      "d_day": "D-6",
+      "d_day": "D-5",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -1594,7 +1616,7 @@
       "keywords": "오피스텔",
       "court_name": "서울남부지방법원",
       "auction_date": "2026-04-14",
-      "d_day": "D-6",
+      "d_day": "D-5",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -1620,7 +1642,7 @@
       "keywords": "아파트",
       "court_name": "서울남부지방법원",
       "auction_date": "2026-04-21",
-      "d_day": "D-13",
+      "d_day": "D-12",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -1646,7 +1668,7 @@
       "keywords": "오피스텔",
       "court_name": "서울중앙지방법원",
       "auction_date": "2026-04-22",
-      "d_day": "D-14",
+      "d_day": "D-13",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -1672,7 +1694,7 @@
       "keywords": "오피스텔",
       "court_name": "서울동부지방법원",
       "auction_date": "2026-05-11",
-      "d_day": "D-33",
+      "d_day": "D-32",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -1698,7 +1720,7 @@
       "keywords": "아파트",
       "court_name": "고양지원",
       "auction_date": "2026-04-14",
-      "d_day": "D-6",
+      "d_day": "D-5",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -1724,7 +1746,7 @@
       "keywords": "아파트",
       "court_name": "안양지원",
       "auction_date": "2026-04-21",
-      "d_day": "D-13",
+      "d_day": "D-12",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -1750,7 +1772,7 @@
       "keywords": "대지,단독주택",
       "court_name": "성남지원",
       "auction_date": "2026-04-20",
-      "d_day": "D-12",
+      "d_day": "D-11",
       "property_type": "대지,단독주택",
       "building_type": "",
       "area": "",
@@ -1776,7 +1798,7 @@
       "keywords": "단독주택",
       "court_name": "성남지원",
       "auction_date": "2026-04-27",
-      "d_day": "D-19",
+      "d_day": "D-18",
       "property_type": "단독주택",
       "building_type": "",
       "area": "",
@@ -1785,6 +1807,58 @@
       "minprice_num": 9912000,
       "appraisal_price_num": 0,
       "auction_count_num": 10,
+      "price_ratio_num": 0
+    },
+    {
+      "uid": 567632,
+      "region": "경기도",
+      "subregion": "화성시",
+      "full_region": "경기도 화성시",
+      "address": "경기도 화성시 남양읍 고향의봄길 137-73 (주1동)",
+      "minprice": 50565000,
+      "minprice_formatted": "5천만 56만원",
+      "appraisal_price": 0,
+      "appraisal_price_formatted": "정보없음",
+      "price_ratio": "정보없음",
+      "auction_count": 6,
+      "keywords": "단독주택",
+      "court_name": "수원지방법원",
+      "auction_date": "2026-04-13",
+      "d_day": "D-4",
+      "property_type": "단독주택",
+      "building_type": "",
+      "area": "",
+      "floor": "",
+      "total_floor": "",
+      "minprice_num": 50565000,
+      "appraisal_price_num": 0,
+      "auction_count_num": 6,
+      "price_ratio_num": 0
+    },
+    {
+      "uid": 466996,
+      "region": "경기도",
+      "subregion": "용인시",
+      "full_region": "경기도 용인시",
+      "address": "경기도 용인시 수지구 상현로 2",
+      "minprice": 475300000,
+      "minprice_formatted": "4억 7천만원",
+      "appraisal_price": 0,
+      "appraisal_price_formatted": "정보없음",
+      "price_ratio": "정보없음",
+      "auction_count": 1,
+      "keywords": "아파트",
+      "court_name": "수원지방법원",
+      "auction_date": "2026-04-15",
+      "d_day": "D-6",
+      "property_type": "아파트",
+      "building_type": "",
+      "area": "",
+      "floor": "",
+      "total_floor": "",
+      "minprice_num": 475300000,
+      "appraisal_price_num": 0,
+      "auction_count_num": 1,
       "price_ratio_num": 0
     },
     {
@@ -1802,7 +1876,7 @@
       "keywords": "오피스텔",
       "court_name": "수원지방법원",
       "auction_date": "2026-05-06",
-      "d_day": "D-28",
+      "d_day": "D-27",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -1814,55 +1888,29 @@
       "price_ratio_num": 0
     },
     {
-      "uid": 482655,
+      "uid": 550854,
       "region": "경기도",
-      "subregion": "이천시",
-      "full_region": "경기도 이천시",
-      "address": "경기도 이천시 설성면 설장로 434-20 (1동)",
-      "minprice": 159587000,
-      "minprice_formatted": "1억 5천만원",
+      "subregion": "안양시",
+      "full_region": "경기도 안양시",
+      "address": "경기도 안양시 만안구 안양동 889-3 ",
+      "minprice": 175950000,
+      "minprice_formatted": "1억 7천만원",
       "appraisal_price": 0,
       "appraisal_price_formatted": "정보없음",
       "price_ratio": "정보없음",
-      "auction_count": 6,
-      "keywords": "단독주택,대지,창고시설",
-      "court_name": "여주지원",
-      "auction_date": "2026-04-08",
-      "d_day": "D-Day",
-      "property_type": "단독주택,대지,창고시설",
-      "building_type": "",
-      "area": "",
-      "floor": "",
-      "total_floor": "",
-      "minprice_num": 159587000,
-      "appraisal_price_num": 0,
-      "auction_count_num": 6,
-      "price_ratio_num": 0
-    },
-    {
-      "uid": 576783,
-      "region": "경기도",
-      "subregion": "양평군",
-      "full_region": "경기도 양평군",
-      "address": "경기도 양평군 서종면 수입리 174-27 ",
-      "minprice": 54460000,
-      "minprice_formatted": "5천만 446만원",
-      "appraisal_price": 0,
-      "appraisal_price_formatted": "정보없음",
-      "price_ratio": "정보없음",
-      "auction_count": 5,
+      "auction_count": 7,
       "keywords": "대지,단독주택",
-      "court_name": "여주지원",
-      "auction_date": "2026-04-08",
-      "d_day": "D-Day",
+      "court_name": "안양지원",
+      "auction_date": "2026-05-12",
+      "d_day": "D-33",
       "property_type": "대지,단독주택",
       "building_type": "",
       "area": "",
       "floor": "",
       "total_floor": "",
-      "minprice_num": 54460000,
+      "minprice_num": 175950000,
       "appraisal_price_num": 0,
-      "auction_count_num": 5,
+      "auction_count_num": 7,
       "price_ratio_num": 0
     },
     {
@@ -1880,7 +1928,7 @@
       "keywords": "오피스텔",
       "court_name": "안양지원",
       "auction_date": "2026-04-14",
-      "d_day": "D-6",
+      "d_day": "D-5",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -1906,7 +1954,7 @@
       "keywords": "단독주택,대지",
       "court_name": "성남지원",
       "auction_date": "2026-05-11",
-      "d_day": "D-33",
+      "d_day": "D-32",
       "property_type": "단독주택,대지",
       "building_type": "",
       "area": "",
@@ -1932,7 +1980,7 @@
       "keywords": "대지,단독주택",
       "court_name": "성남지원",
       "auction_date": "2026-05-11",
-      "d_day": "D-33",
+      "d_day": "D-32",
       "property_type": "대지,단독주택",
       "building_type": "",
       "area": "",
@@ -1958,7 +2006,7 @@
       "keywords": "단독주택,대지,도로",
       "court_name": "여주지원",
       "auction_date": "2026-04-22",
-      "d_day": "D-14",
+      "d_day": "D-13",
       "property_type": "단독주택,대지,도로",
       "building_type": "",
       "area": "",
@@ -1984,7 +2032,7 @@
       "keywords": "오피스텔",
       "court_name": "안양지원",
       "auction_date": "2026-04-28",
-      "d_day": "D-20",
+      "d_day": "D-19",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -1993,32 +2041,6 @@
       "minprice_num": 104000000,
       "appraisal_price_num": 0,
       "auction_count_num": 11,
-      "price_ratio_num": 0
-    },
-    {
-      "uid": 604848,
-      "region": "경기도",
-      "subregion": "양평군",
-      "full_region": "경기도 양평군",
-      "address": "경기도 양평군 양서면 국수리 431-11 ",
-      "minprice": 162413000,
-      "minprice_formatted": "1억 6천만원",
-      "appraisal_price": 0,
-      "appraisal_price_formatted": "정보없음",
-      "price_ratio": "정보없음",
-      "auction_count": 3,
-      "keywords": "대지,단독주택",
-      "court_name": "여주지원",
-      "auction_date": "2026-04-08",
-      "d_day": "D-Day",
-      "property_type": "대지,단독주택",
-      "building_type": "",
-      "area": "",
-      "floor": "",
-      "total_floor": "",
-      "minprice_num": 162413000,
-      "appraisal_price_num": 0,
-      "auction_count_num": 3,
       "price_ratio_num": 0
     },
     {
@@ -2036,7 +2058,7 @@
       "keywords": "아파트",
       "court_name": "남양주지원",
       "auction_date": "2026-04-09",
-      "d_day": "D-1",
+      "d_day": "D-Day",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -2062,7 +2084,7 @@
       "keywords": "대지,단독주택",
       "court_name": "수원지방법원",
       "auction_date": "2026-04-15",
-      "d_day": "D-7",
+      "d_day": "D-6",
       "property_type": "대지,단독주택",
       "building_type": "",
       "area": "",
@@ -2088,7 +2110,7 @@
       "keywords": "아파트",
       "court_name": "수원지방법원",
       "auction_date": "2026-04-28",
-      "d_day": "D-20",
+      "d_day": "D-19",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -2100,55 +2122,55 @@
       "price_ratio_num": 0
     },
     {
-      "uid": 425828,
+      "uid": 564650,
       "region": "경기도",
-      "subregion": "수원시",
-      "full_region": "경기도 수원시",
-      "address": "경기도 수원시 권선구 금곡로196번길 15",
-      "minprice": 3322000,
-      "minprice_formatted": "332만원",
+      "subregion": "군포시",
+      "full_region": "경기도 군포시",
+      "address": "경기도 군포시 당동 923 대흥아파트  5층505호",
+      "minprice": 50835000,
+      "minprice_formatted": "5천만 83만원",
       "appraisal_price": 0,
       "appraisal_price_formatted": "정보없음",
       "price_ratio": "정보없음",
-      "auction_count": 11,
-      "keywords": "오피스텔",
-      "court_name": "수원지방법원",
-      "auction_date": "2026-04-08",
-      "d_day": "D-Day",
-      "property_type": "오피스텔",
+      "auction_count": 8,
+      "keywords": "아파트",
+      "court_name": "안양지원",
+      "auction_date": "2026-04-21",
+      "d_day": "D-12",
+      "property_type": "아파트",
       "building_type": "",
       "area": "",
       "floor": "",
       "total_floor": "",
-      "minprice_num": 3322000,
+      "minprice_num": 50835000,
       "appraisal_price_num": 0,
-      "auction_count_num": 11,
+      "auction_count_num": 8,
       "price_ratio_num": 0
     },
     {
-      "uid": 604856,
+      "uid": 584889,
       "region": "경기도",
-      "subregion": "양평군",
-      "full_region": "경기도 양평군",
-      "address": "경기도 양평군 양서면 대심상심길 232",
-      "minprice": 238547000,
-      "minprice_formatted": "2억 3천만원",
+      "subregion": "안양시",
+      "full_region": "경기도 안양시",
+      "address": "경기도 안양시 만안구 경수대로1201번길 31-12",
+      "minprice": 142472000,
+      "minprice_formatted": "1억 4천만원",
       "appraisal_price": 0,
       "appraisal_price_formatted": "정보없음",
       "price_ratio": "정보없음",
-      "auction_count": 3,
-      "keywords": "단독주택,대지,도로",
-      "court_name": "여주지원",
-      "auction_date": "2026-04-08",
-      "d_day": "D-Day",
-      "property_type": "단독주택,대지,도로",
+      "auction_count": 5,
+      "keywords": "다가구주택,대지",
+      "court_name": "안양지원",
+      "auction_date": "2026-05-12",
+      "d_day": "D-33",
+      "property_type": "다가구주택,대지",
       "building_type": "",
       "area": "",
       "floor": "",
       "total_floor": "",
-      "minprice_num": 238547000,
+      "minprice_num": 142472000,
       "appraisal_price_num": 0,
-      "auction_count_num": 3,
+      "auction_count_num": 5,
       "price_ratio_num": 0
     },
     {
@@ -2166,7 +2188,7 @@
       "keywords": "오피스텔",
       "court_name": "안양지원",
       "auction_date": "2026-04-14",
-      "d_day": "D-6",
+      "d_day": "D-5",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -2192,7 +2214,7 @@
       "keywords": "오피스텔",
       "court_name": "수원지방법원",
       "auction_date": "2026-05-01",
-      "d_day": "D-23",
+      "d_day": "D-22",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -2218,7 +2240,7 @@
       "keywords": "대지,단독주택",
       "court_name": "고양지원",
       "auction_date": "2026-04-22",
-      "d_day": "D-14",
+      "d_day": "D-13",
       "property_type": "대지,단독주택",
       "building_type": "",
       "area": "",
@@ -2227,32 +2249,6 @@
       "minprice_num": 228669000,
       "appraisal_price_num": 0,
       "auction_count_num": 2,
-      "price_ratio_num": 0
-    },
-    {
-      "uid": 516076,
-      "region": "경기도",
-      "subregion": "평택시",
-      "full_region": "경기도 평택시",
-      "address": "경기도 평택시 송탄로361번길 41",
-      "minprice": 10452000,
-      "minprice_formatted": "1천만 45만원",
-      "appraisal_price": 0,
-      "appraisal_price_formatted": "정보없음",
-      "price_ratio": "정보없음",
-      "auction_count": 9,
-      "keywords": "아파트",
-      "court_name": "평택지원",
-      "auction_date": "2026-04-20",
-      "d_day": "D-12",
-      "property_type": "아파트",
-      "building_type": "",
-      "area": "",
-      "floor": "",
-      "total_floor": "",
-      "minprice_num": 10452000,
-      "appraisal_price_num": 0,
-      "auction_count_num": 9,
       "price_ratio_num": 0
     },
     {
@@ -2270,7 +2266,7 @@
       "keywords": "아파트",
       "court_name": "수원지방법원",
       "auction_date": "2026-04-27",
-      "d_day": "D-19",
+      "d_day": "D-18",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -2279,6 +2275,32 @@
       "minprice_num": 562100000,
       "appraisal_price_num": 0,
       "auction_count_num": 1,
+      "price_ratio_num": 0
+    },
+    {
+      "uid": 516076,
+      "region": "경기도",
+      "subregion": "평택시",
+      "full_region": "경기도 평택시",
+      "address": "경기도 평택시 송탄로361번길 41",
+      "minprice": 10452000,
+      "minprice_formatted": "1천만 45만원",
+      "appraisal_price": 0,
+      "appraisal_price_formatted": "정보없음",
+      "price_ratio": "정보없음",
+      "auction_count": 9,
+      "keywords": "아파트",
+      "court_name": "평택지원",
+      "auction_date": "2026-04-20",
+      "d_day": "D-11",
+      "property_type": "아파트",
+      "building_type": "",
+      "area": "",
+      "floor": "",
+      "total_floor": "",
+      "minprice_num": 10452000,
+      "appraisal_price_num": 0,
+      "auction_count_num": 9,
       "price_ratio_num": 0
     },
     {
@@ -2296,7 +2318,7 @@
       "keywords": "아파트",
       "court_name": "평택지원",
       "auction_date": "2026-04-21",
-      "d_day": "D-13",
+      "d_day": "D-12",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -2305,32 +2327,6 @@
       "minprice_num": 3361000,
       "appraisal_price_num": 0,
       "auction_count_num": 11,
-      "price_ratio_num": 0
-    },
-    {
-      "uid": 507913,
-      "region": "경기도",
-      "subregion": "안양시",
-      "full_region": "경기도 안양시",
-      "address": "경기도 안양시 동안구 경수대로 701",
-      "minprice": 8658000,
-      "minprice_formatted": "865만원",
-      "appraisal_price": 0,
-      "appraisal_price_formatted": "정보없음",
-      "price_ratio": "정보없음",
-      "auction_count": 12,
-      "keywords": "오피스텔",
-      "court_name": "안양지원",
-      "auction_date": "2026-04-14",
-      "d_day": "D-6",
-      "property_type": "오피스텔",
-      "building_type": "",
-      "area": "",
-      "floor": "",
-      "total_floor": "",
-      "minprice_num": 8658000,
-      "appraisal_price_num": 0,
-      "auction_count_num": 12,
       "price_ratio_num": 0
     },
     {
@@ -2348,7 +2344,7 @@
       "keywords": "아파트",
       "court_name": "성남지원",
       "auction_date": "2026-06-01",
-      "d_day": "D-54",
+      "d_day": "D-53",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -2357,6 +2353,32 @@
       "minprice_num": 370300000,
       "appraisal_price_num": 0,
       "auction_count_num": 1,
+      "price_ratio_num": 0
+    },
+    {
+      "uid": 507913,
+      "region": "경기도",
+      "subregion": "안양시",
+      "full_region": "경기도 안양시",
+      "address": "경기도 안양시 동안구 경수대로 701",
+      "minprice": 8658000,
+      "minprice_formatted": "865만원",
+      "appraisal_price": 0,
+      "appraisal_price_formatted": "정보없음",
+      "price_ratio": "정보없음",
+      "auction_count": 12,
+      "keywords": "오피스텔",
+      "court_name": "안양지원",
+      "auction_date": "2026-04-14",
+      "d_day": "D-5",
+      "property_type": "오피스텔",
+      "building_type": "",
+      "area": "",
+      "floor": "",
+      "total_floor": "",
+      "minprice_num": 8658000,
+      "appraisal_price_num": 0,
+      "auction_count_num": 12,
       "price_ratio_num": 0
     },
     {
@@ -2374,7 +2396,7 @@
       "keywords": "단독주택,전",
       "court_name": "수원지방법원",
       "auction_date": "2026-04-28",
-      "d_day": "D-20",
+      "d_day": "D-19",
       "property_type": "단독주택,전",
       "building_type": "",
       "area": "",
@@ -2383,32 +2405,6 @@
       "minprice_num": 31596184,
       "appraisal_price_num": 0,
       "auction_count_num": 4,
-      "price_ratio_num": 0
-    },
-    {
-      "uid": 543761,
-      "region": "경기도",
-      "subregion": "양평군",
-      "full_region": "경기도 양평군",
-      "address": "경기도 양평군 양서면 증동리 294-22 ",
-      "minprice": 322324000,
-      "minprice_formatted": "3억 2천만원",
-      "appraisal_price": 0,
-      "appraisal_price_formatted": "정보없음",
-      "price_ratio": "정보없음",
-      "auction_count": 2,
-      "keywords": "대지,단독주택,도로,주차장",
-      "court_name": "여주지원",
-      "auction_date": "2026-04-08",
-      "d_day": "D-Day",
-      "property_type": "대지,단독주택,도로,주차장",
-      "building_type": "",
-      "area": "",
-      "floor": "",
-      "total_floor": "",
-      "minprice_num": 322324000,
-      "appraisal_price_num": 0,
-      "auction_count_num": 2,
       "price_ratio_num": 0
     },
     {
@@ -2426,7 +2422,7 @@
       "keywords": "오피스텔",
       "court_name": "수원지방법원",
       "auction_date": "2026-04-22",
-      "d_day": "D-14",
+      "d_day": "D-13",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -2435,32 +2431,6 @@
       "minprice_num": 35741000,
       "appraisal_price_num": 0,
       "auction_count_num": 7,
-      "price_ratio_num": 0
-    },
-    {
-      "uid": 585987,
-      "region": "경기도",
-      "subregion": "양평군",
-      "full_region": "경기도 양평군",
-      "address": "경기도 양평군 강하면 왕창리 700 ",
-      "minprice": 9057000,
-      "minprice_formatted": "905만원",
-      "appraisal_price": 0,
-      "appraisal_price_formatted": "정보없음",
-      "price_ratio": "정보없음",
-      "auction_count": 2,
-      "keywords": "대지,단독주택",
-      "court_name": "여주지원",
-      "auction_date": "2026-04-08",
-      "d_day": "D-Day",
-      "property_type": "대지,단독주택",
-      "building_type": "",
-      "area": "",
-      "floor": "",
-      "total_floor": "",
-      "minprice_num": 9057000,
-      "appraisal_price_num": 0,
-      "auction_count_num": 2,
       "price_ratio_num": 0
     },
     {
@@ -2478,7 +2448,7 @@
       "keywords": "단독주택,대지",
       "court_name": "의정부지방법원",
       "auction_date": "2026-04-22",
-      "d_day": "D-14",
+      "d_day": "D-13",
       "property_type": "단독주택,대지",
       "building_type": "",
       "area": "",
@@ -2487,32 +2457,6 @@
       "minprice_num": 12610000,
       "appraisal_price_num": 0,
       "auction_count_num": 5,
-      "price_ratio_num": 0
-    },
-    {
-      "uid": 603154,
-      "region": "경기도",
-      "subregion": "양평군",
-      "full_region": "경기도 양평군",
-      "address": "경기도 양평군 옥천면 옥천리 331-7 ",
-      "minprice": 208509000,
-      "minprice_formatted": "2억 850만원",
-      "appraisal_price": 0,
-      "appraisal_price_formatted": "정보없음",
-      "price_ratio": "정보없음",
-      "auction_count": 3,
-      "keywords": "대지,단독주택",
-      "court_name": "여주지원",
-      "auction_date": "2026-04-08",
-      "d_day": "D-Day",
-      "property_type": "대지,단독주택",
-      "building_type": "",
-      "area": "",
-      "floor": "",
-      "total_floor": "",
-      "minprice_num": 208509000,
-      "appraisal_price_num": 0,
-      "auction_count_num": 3,
       "price_ratio_num": 0
     },
     {
@@ -2530,7 +2474,7 @@
       "keywords": "오피스텔",
       "court_name": "수원지방법원",
       "auction_date": "2026-04-17",
-      "d_day": "D-9",
+      "d_day": "D-8",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -2556,7 +2500,7 @@
       "keywords": "오피스텔",
       "court_name": "안산지원",
       "auction_date": "2026-04-16",
-      "d_day": "D-8",
+      "d_day": "D-7",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -2565,6 +2509,32 @@
       "minprice_num": 6801000,
       "appraisal_price_num": 0,
       "auction_count_num": 11,
+      "price_ratio_num": 0
+    },
+    {
+      "uid": 593547,
+      "region": "경기도",
+      "subregion": "화성시",
+      "full_region": "경기도 화성시",
+      "address": "경기도 화성시 봉담읍 동화새터길 55-39",
+      "minprice": 64203000,
+      "minprice_formatted": "6천만 420만원",
+      "appraisal_price": 0,
+      "appraisal_price_formatted": "정보없음",
+      "price_ratio": "정보없음",
+      "auction_count": 5,
+      "keywords": "아파트",
+      "court_name": "수원지방법원",
+      "auction_date": "2026-05-01",
+      "d_day": "D-22",
+      "property_type": "아파트",
+      "building_type": "",
+      "area": "",
+      "floor": "",
+      "total_floor": "",
+      "minprice_num": 64203000,
+      "appraisal_price_num": 0,
+      "auction_count_num": 5,
       "price_ratio_num": 0
     },
     {
@@ -2582,7 +2552,7 @@
       "keywords": "오피스텔",
       "court_name": "수원지방법원",
       "auction_date": "2026-05-06",
-      "d_day": "D-28",
+      "d_day": "D-27",
       "property_type": "오피스텔",
       "building_type": "",
       "area": "",
@@ -2608,7 +2578,7 @@
       "keywords": "아파트",
       "court_name": "고양지원",
       "auction_date": "2026-05-13",
-      "d_day": "D-35",
+      "d_day": "D-34",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
@@ -2620,29 +2590,29 @@
       "price_ratio_num": 0
     },
     {
-      "uid": 593547,
+      "uid": 566189,
       "region": "경기도",
-      "subregion": "화성시",
-      "full_region": "경기도 화성시",
-      "address": "경기도 화성시 봉담읍 동화새터길 55-39",
-      "minprice": 64203000,
-      "minprice_formatted": "6천만 420만원",
+      "subregion": "평택시",
+      "full_region": "경기도 평택시",
+      "address": "경기도 평택시 원평로25번길 63",
+      "minprice": 15647317,
+      "minprice_formatted": "1천만 564만원",
       "appraisal_price": 0,
       "appraisal_price_formatted": "정보없음",
       "price_ratio": "정보없음",
-      "auction_count": 5,
+      "auction_count": 7,
       "keywords": "아파트",
-      "court_name": "수원지방법원",
-      "auction_date": "2026-05-01",
-      "d_day": "D-23",
+      "court_name": "평택지원",
+      "auction_date": "2026-05-12",
+      "d_day": "D-33",
       "property_type": "아파트",
       "building_type": "",
       "area": "",
       "floor": "",
       "total_floor": "",
-      "minprice_num": 64203000,
+      "minprice_num": 15647317,
       "appraisal_price_num": 0,
-      "auction_count_num": 5,
+      "auction_count_num": 7,
       "price_ratio_num": 0
     },
     {
@@ -2660,7 +2630,7 @@
       "keywords": "대지,전,단독주택",
       "court_name": "평택지원",
       "auction_date": "2026-05-11",
-      "d_day": "D-33",
+      "d_day": "D-32",
       "property_type": "대지,전,단독주택",
       "building_type": "",
       "area": "",
@@ -2686,7 +2656,7 @@
       "keywords": "대지,단독주택",
       "court_name": "고양지원",
       "auction_date": "2026-04-28",
-      "d_day": "D-20",
+      "d_day": "D-19",
       "property_type": "대지,단독주택",
       "building_type": "",
       "area": "",
@@ -2713,7 +2683,7 @@
       "courtinterestcount": 9,
       "cregdate": "2024-12-02 06:03:14",
       "cupdate": "2026-04-07 23:02:16",
-      "daystr": -5,
+      "daystr": -4,
       "detailaddress": "화양동,신원리브웰 화양동 주상복합 4층405호 ",
       "estimatedprice": 227000000,
       "frontaddress": "서울특별시 광진구 능동로 170",
@@ -2737,7 +2707,7 @@
       "percent": 9,
       "pnu": "1121510700101110088",
       "pushed": "Y",
-      "realcount": 8537,
+      "realcount": 8553,
       "region": "서울시",
       "requestupdate": "N",
       "s3_auctionclaim_uid": 394958,
@@ -2773,7 +2743,7 @@
       "court": "서울중앙지방법원",
       "cregdate": "2024-10-03 06:03:26",
       "cupdate": "2026-04-07 23:11:40",
-      "daystr": -8,
+      "daystr": -7,
       "detailaddress": "서초동,이즈타워 10층1028호 ",
       "estimatedprice": 265000000,
       "frontaddress": "서울특별시 서초구 사임당로 178",
@@ -2798,7 +2768,7 @@
       "pnu": "1165010800113370014",
       "price": 23859999,
       "pushed": "Y",
-      "realcount": 6512,
+      "realcount": 6524,
       "realpercent": 9,
       "region": "서울시",
       "requestupdate": "N",
@@ -2838,7 +2808,7 @@
       "courtinterestcount": 29,
       "cregdate": "2024-10-09 06:05:37",
       "cupdate": "2026-04-07 23:38:43",
-      "daystr": -14,
+      "daystr": -13,
       "detailaddress": "역삼동,태건강남헤븐리치더써밋761 4층418호 ",
       "estimatedprice": 242000000,
       "frontaddress": "서울특별시 강남구 봉은사로 170",
@@ -2862,7 +2832,7 @@
       "percent": 4,
       "pnu": "1168010100106050017",
       "pushed": "Y",
-      "realcount": 4237,
+      "realcount": 4241,
       "region": "서울시",
       "requestupdate": "N",
       "s3_auctionclaim_uid": 384273,
@@ -2887,6 +2857,64 @@
       "weekstr": "수"
     },
     {
+      "address": "서울특별시 서대문구 충정로7길 9",
+      "auctioncount": 2,
+      "auctiondate": "2026-05-12",
+      "auctiondatetime": "2026-05-12 10:00:00",
+      "auctionmsg_display": "경매알리미 #503662",
+      "auctionmsg_url": "https://map.auctionmsg.com/auction/detail/503662",
+      "claimprice": 381945205,
+      "court": "서울서부지방법원",
+      "cregdate": "2024-11-19 06:17:45",
+      "cupdate": "2026-04-07 23:02:36",
+      "daystr": -33,
+      "estimatedprice": 427000000,
+      "id": "2024타경53337",
+      "image": "DR60MD8651DI46MUUMHXLLZP_1766439288.jpg",
+      "incharge": "경매6계",
+      "isactivate": "Y",
+      "isnew": false,
+      "itemcnt": 2,
+      "keyword2": "",
+      "keyword3": "지분매각, 우선매수권",
+      "lat": 37.56323097012413,
+      "latlngchecked": "N",
+      "lng": 126.96407531370525,
+      "maemul": 1,
+      "maemulinfo": "아파트,대지",
+      "mapprice": "3.4억",
+      "minprice": 341600000,
+      "naddress": "서울특별시 서대문구 충정로3가 189-8",
+      "overtime": false,
+      "percent": 80,
+      "pnu": "1141010200101890008",
+      "pushed": "Y",
+      "realcount": 4207,
+      "region": "서울시",
+      "requesetdata": "2025-01-14",
+      "requestupdate": "Y",
+      "s3_auctionclaim_uid": 392411,
+      "s3_auctionmegakspec_uid": 350492,
+      "s3_region1_code": 11,
+      "s3_region2_code": 11410,
+      "s3_region3_code": 11410102,
+      "score": 0,
+      "simpleminclaimprice": "3억 8194만원",
+      "simpleminestimatedprice": "4억 2700만원",
+      "simpleminprice": "3억 4160만원",
+      "specpdf": "EE60DL1636GV63DIRTKPYFVF_1732569360",
+      "specpdfurl": "https://ecfs.scourt.go.kr/sgvo/websquare/websquare.html?w2xPath=/sgvo/ui/sgvo200/SGVO201M01.xml?paramData=eyJlbmNQYXJhbSI6Ik12VktrNlJrbFdJY2dDbUdOYVo0JTJCcGdkNUJGT1FuRFhldVNmNk1USXpybE8lMkJLeURDVzFPdTllUjZhSjhGTXJlY2NsSEFPb2VHbkJOWE9ZM2hVRDJwQUViZSUyQlhDcnRUdmolMkJIcTZ6WTR1dFRqR2tTZExpQiUyQnhJRTJwWmxyJTJGJTJGbSUyQkFBb0EiLCJwc3BUa24iOiJOQSIsInBzcFNpZCI6Ik5BIn0=",
+      "status": "매각기일",
+      "statusupdate": "2025-01-14 08:21:11",
+      "subregion": "서대문구",
+      "tel": "02-3271-1326",
+      "tendertype": "기일입찰",
+      "totalscore": 11,
+      "uid": 503662,
+      "url": "/nas_e_image_pgj/kp/2024/0420/B000215202401300533379.jpg",
+      "weekstr": "화"
+    },
+    {
       "address": "서울특별시 은평구 갈현로 300, 9층906호 (갈현동,(유)갈현상가)",
       "auctioncount": 12,
       "auctiondate": "2026-04-14",
@@ -2899,7 +2927,7 @@
       "courtinterestcount": 1,
       "cregdate": "2025-01-21 08:06:18",
       "cupdate": "2026-04-07 23:02:50",
-      "daystr": -6,
+      "daystr": -5,
       "estimatedprice": 124000000,
       "frontaddress": "서울특별시 은평구 갈현로 300",
       "id": "2024타경56565",
@@ -2920,7 +2948,7 @@
       "percent": 7,
       "pnu": "1138010400105480000",
       "pushed": "Y",
-      "realcount": 2847,
+      "realcount": 2851,
       "region": "서울시",
       "requestupdate": "N",
       "s3_auctionclaim_uid": 402468,
@@ -2958,7 +2986,7 @@
       "courtinterestcount": 23,
       "cregdate": "2023-11-30 06:04:16",
       "cupdate": "2026-04-07 23:10:59",
-      "daystr": -6,
+      "daystr": -5,
       "detailaddress": "영등포동2가 제4층 제403호 ",
       "estimatedprice": 138000000,
       "frontaddress": "서울특별시 영등포구 국회대로54길 41-6",
@@ -2983,7 +3011,7 @@
       "pnu": "1156010300100280153",
       "price": 4259999,
       "pushed": "Y",
-      "realcount": 2283,
+      "realcount": 2284,
       "realpercent": 3,
       "region": "서울시",
       "requesetdata": "2025-02-06",
@@ -3024,7 +3052,7 @@
       "courtinterestcount": 9,
       "cregdate": "2024-06-05 17:38:33",
       "cupdate": "2026-04-07 23:11:34",
-      "daystr": -13,
+      "daystr": -12,
       "detailaddress": "공항동 제101동 제4층 제404호 ",
       "estimatedprice": 159000000,
       "frontaddress": "서울특별시 강서구 송정로 53",
@@ -3048,7 +3076,7 @@
       "percent": 3,
       "pnu": "1150010800113780000",
       "pushed": "Y",
-      "realcount": 2186,
+      "realcount": 2189,
       "region": "서울시",
       "requestupdate": "N",
       "s3_auctionclaim_uid": 364177,
@@ -3086,7 +3114,7 @@
       "courtinterestcount": 8,
       "cregdate": "2024-08-21 06:01:29",
       "cupdate": "2026-04-07 23:38:20",
-      "daystr": -14,
+      "daystr": -13,
       "detailaddress": "봉천동,시우트리 11층1101호 ",
       "estimatedprice": 261000000,
       "frontaddress": "서울특별시 관악구 행운1길 125",
@@ -3110,7 +3138,7 @@
       "percent": 3,
       "pnu": "1162010100100270002",
       "pushed": "N",
-      "realcount": 1577,
+      "realcount": 1581,
       "region": "서울시",
       "requestupdate": "N",
       "s3_auctionclaim_uid": 376044,
@@ -3148,7 +3176,7 @@
       "courtinterestcount": 6,
       "cregdate": "2024-09-09 06:00:56",
       "cupdate": "2026-04-07 23:34:19",
-      "daystr": -33,
+      "daystr": -32,
       "detailaddress": "군자동,동원데쟈뷰 4층410호 ",
       "estimatedprice": 220000000,
       "frontaddress": "서울특별시 광진구 동일로 194",
@@ -3210,7 +3238,7 @@
       "courtinterestcount": 23,
       "cregdate": "2024-10-15 07:23:26",
       "cupdate": "2026-04-08 00:04:34",
-      "daystr": -6,
+      "daystr": -5,
       "detailaddress": "행신동,소만마을아파트 703동 13층1303호 ",
       "estimatedprice": 376000000,
       "frontaddress": "경기도 고양시 덕양구 화신로 36",
@@ -3234,7 +3262,7 @@
       "percent": 1,
       "pnu": "4128112800107830000",
       "pushed": "Y",
-      "realcount": 7121,
+      "realcount": 7128,
       "region": "경기도",
       "requesetdata": "2024-12-09",
       "requestupdate": "N",
@@ -3257,75 +3285,6 @@
       "totalscore": 22,
       "uid": 494540,
       "url": "/nas_e_image_pgj/kp/2024/0323/B2148072024013006525513.jpg",
-      "weekstr": "화"
-    },
-    {
-      "address": "경기도 안양시 만안구 경수대로 1169, 8층802호 (안양동,청담캐슬)",
-      "auctioncount": 12,
-      "auctiondate": "2026-04-21",
-      "auctiondatetime": "2026-04-21 10:00:00",
-      "auctionmsg_display": "경매알리미 #478279",
-      "auctionmsg_url": "https://map.auctionmsg.com/auction/detail/478279",
-      "auctionpercent": 65,
-      "buildname": "안양동,청담캐슬",
-      "claimprice": 306586220,
-      "correction_date": "2025-08-22",
-      "correction_reason": "2025.8.22. 변경 후 추후지정",
-      "court": "안양지원",
-      "courtcount": 50,
-      "courtinterestcount": 11,
-      "cregdate": "2024-08-06 06:29:07",
-      "cupdate": "2026-04-08 00:12:11",
-      "daystr": -13,
-      "detailaddress": "안양동,청담캐슬 8층802호 ",
-      "estimatedprice": 308000000,
-      "frontaddress": "경기도 안양시 만안구 경수대로 1169",
-      "id": "2024타경102814",
-      "image": "TI40DB6712MR93PDEUKJXWSJ_1739806883.jpg",
-      "incharge": "경매3계",
-      "isactivate": "Y",
-      "isnew": false,
-      "itemcnt": 1,
-      "keyword2": "대항력, 말소 안되는 권리, 임차권",
-      "keyword3": "대항력, 말소 안되는 권리, 임차권",
-      "lat": 37.41505247752186,
-      "latlngchecked": "N",
-      "lng": 126.9176992385712,
-      "maemul": 1,
-      "maemulinfo": "아파트",
-      "mapprice": "2억",
-      "minprice": 197120000,
-      "naddress": "경기도 안양시 만안구 안양동 42-6",
-      "overtime": false,
-      "percent": 64,
-      "pnu": "4117110100100420006",
-      "price": 201000000,
-      "pushed": "Y",
-      "realcount": 5098,
-      "realpercent": 65,
-      "region": "경기도",
-      "requesetdata": "2024-12-10",
-      "requestupdate": "N",
-      "s3_auctionclaim_uid": 372713,
-      "s3_auctionmegakspec_uid": 326807,
-      "s3_region1_code": 41,
-      "s3_region2_code": 41171,
-      "s3_region3_code": 41171101,
-      "score": 11,
-      "simpleminclaimprice": "3억 658만원",
-      "simpleminestimatedprice": "3억 800만원",
-      "simpleminprice": "1억 9712만원",
-      "simpleprice": "2억 100만원",
-      "specpdf": "ER75TR4261AH90AYEHXLJWVG_1723499085",
-      "specpdfurl": "https://ecfs.scourt.go.kr/sgvo/websquare/websquare.html?w2xPath=/sgvo/ui/sgvo200/SGVO201M01.xml?paramData=eyJlbmNQYXJhbSI6ImZnR05uTUtGSGRTdGFjV0N6a0diZ3g3eXBDN2xuNFhoQ3VvMDJZN1ZMTlQwZVRLdTclMkZtRDlnOWM4SUFQZTdkSUV4R0V4WVVFUFZWb2pZenNvWFNPdlozTW5EV2VjQlVvcyUyQnFoRmwzTGdCNm4wMSUyRko2RnJ5UThHbUVQanolMkZsZFNBQW9BIiwicHNwVGtuIjoiTkEiLCJwc3BTaWQiOiJOQSJ9",
-      "status": "매각기일",
-      "statusupdate": "2025-01-23 08:20:54",
-      "subregion": "안양시",
-      "tel": "031-8086-1283(1층 민사신청과내)",
-      "tendertype": "기일입찰",
-      "totalscore": 11,
-      "uid": 478279,
-      "url": "/nas_e_image_pgj/kp/2024/0415/B0002542024013010281413.jpg",
       "weekstr": "화"
     }
   ]
