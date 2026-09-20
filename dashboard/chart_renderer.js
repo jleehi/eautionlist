@@ -50,8 +50,8 @@ function destroyAllCharts() {
 function showEmptyChartMessages() {
     const chartContexts = [
         'regionChart',
-        'priceChart',
-        'propertyChart'
+        'priceRangeChart',
+        'propertyTypeChart'
     ];
     
     chartContexts.forEach(chartId => {
@@ -179,18 +179,18 @@ function createPriceChart(dashboardData) {
         ];
         
         // 차트 생성
-        const ctx = document.getElementById('priceChart');
+        const ctx = document.getElementById('priceRangeChart');
         if (!ctx) {
             console.warn('⚠️ 가격대별 차트 요소를 찾을 수 없습니다.');
             return;
         }
         
         // 기존 차트 제거
-        if (charts.priceChart) {
-            charts.priceChart.destroy();
+        if (charts.priceRangeChart) {
+            charts.priceRangeChart.destroy();
         }
         
-        charts.priceChart = new Chart(ctx, {
+        charts.priceRangeChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: priceRanges,
@@ -267,18 +267,18 @@ function createPropertyChart(dashboardData) {
         ];
         
         // 차트 생성
-        const ctx = document.getElementById('propertyChart');
+        const ctx = document.getElementById('propertyTypeChart');
         if (!ctx) {
             console.warn('⚠️ 매물 종류별 차트 요소를 찾을 수 없습니다.');
             return;
         }
         
         // 기존 차트 제거
-        if (charts.propertyChart) {
-            charts.propertyChart.destroy();
+        if (charts.propertyTypeChart) {
+            charts.propertyTypeChart.destroy();
         }
         
-        charts.propertyChart = new Chart(ctx, {
+        charts.propertyTypeChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
                 labels: propertyTypes,
