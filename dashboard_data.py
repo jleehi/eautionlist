@@ -385,7 +385,7 @@ def analyze_by_price_range(data):
         '3억~4억': {'min': 300000000, 'max': 400000000, 'count': 0, 'items': []},
         '4억~5억': {'min': 400000000, 'max': 500000000, 'count': 0, 'items': []},
         '5억~6억': {'min': 500000000, 'max': 600000000, 'count': 0, 'items': []},
-        '6억 이상': {'min': 600000000, 'max': float('inf'), 'count': 0, 'items': []}
+        '6억 이상': {'min': 600000000, 'max': None, 'count': 0, 'items': []}  # None = 상한 없음 (float('inf') 는 JSON 표준이 아니라 브라우저가 못 읽는다)
     }
     
     # 각 매물을 가격 범위별로 분류
@@ -397,7 +397,8 @@ def analyze_by_price_range(data):
         
         # 해당하는 가격 범위 찾기
         for range_name, range_info in price_ranges.items():
-            if range_info['min'] <= minprice < range_info['max']:
+            upper = range_info['max']
+            if range_info['min'] <= minprice and (upper is None or minprice < upper):
                 range_info['count'] += 1
                 range_info['items'].append({
                     'region': f"{region} {subregion}".strip(),

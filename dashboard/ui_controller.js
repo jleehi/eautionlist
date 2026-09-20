@@ -13,7 +13,7 @@ function initializeUI() {
     console.log('🎨 UI 컨트롤러: UI 초기화 시작...');
     
     // 이벤트 리스너 등록
-    registerEventListeners();
+    uiRegisterEventListeners();
     
     // 테이블 정렬 이벤트 등록
     initializeTableSorting();
@@ -25,13 +25,13 @@ function initializeUI() {
     initializeModal();
     
     // 데이터 로드 이벤트 리스너 등록
-    document.addEventListener('auctionDataLoaded', handleDataLoaded);
+    document.addEventListener('auctionDataLoaded', uiHandleDataLoaded);
     
     console.log('✅ UI 컨트롤러: UI 초기화 완료!');
 }
 
 // 이벤트 리스너 등록
-function registerEventListeners() {
+function uiRegisterEventListeners() {
     console.log('🔄 UI 컨트롤러: 이벤트 리스너 등록...');
     
     // 새로고침 버튼 이벤트 리스너
@@ -43,7 +43,7 @@ function registerEventListeners() {
     // 강제 새로고침 버튼 이벤트 리스너
     const forceRefreshButton = document.getElementById('forceRefreshButton');
     if (forceRefreshButton) {
-        forceRefreshButton.addEventListener('click', handleForceRefreshClick);
+        forceRefreshButton.addEventListener('click', uiHandleForceRefreshClick);
     }
     
     // 페이지네이션 이벤트 위임
@@ -58,7 +58,7 @@ function handleRefreshClick() {
     console.log('🔄 UI 컨트롤러: 새로고침 버튼 클릭!');
     
     // 로딩 표시기 표시
-    showLoadingIndicator(true);
+    uiShowLoadingIndicator(true);
     
     // 데이터 로더 모듈을 통해 데이터 새로고침
     if (window.dataLoader) {
@@ -67,11 +67,11 @@ function handleRefreshClick() {
 }
 
 // 강제 새로고침 버튼 클릭 핸들러
-function handleForceRefreshClick() {
+function uiHandleForceRefreshClick() {
     console.log('🔄 UI 컨트롤러: 강제 새로고침 버튼 클릭!');
     
     // 로딩 표시기 표시
-    showLoadingIndicator(true);
+    uiShowLoadingIndicator(true);
     
     // URL에 refresh 파라미터 추가
     const url = new URL(window.location.href);
@@ -90,11 +90,11 @@ function handleForceRefreshClick() {
 }
 
 // 데이터 로드 완료 핸들러
-function handleDataLoaded(event) {
+function uiHandleDataLoaded(event) {
     console.log('📊 UI 컨트롤러: 데이터 로드 완료!');
     
     // 로딩 표시기 숨기기
-    showLoadingIndicator(false);
+    uiShowLoadingIndicator(false);
     
     // 데이터 소스 표시
     updateDataSourceInfo(event.detail);
@@ -195,7 +195,7 @@ function showSampleDataWarning(isSample, lastUpdated) {
         // 경고 메시지 내의 강제 새로고침 버튼에 이벤트 리스너 추가
         const refreshButton = warningElement.querySelector('#forceRefreshButton');
         if (refreshButton) {
-            refreshButton.addEventListener('click', handleForceRefreshClick);
+            refreshButton.addEventListener('click', uiHandleForceRefreshClick);
         }
     } else {
         warningElement.style.display = 'none';
@@ -203,7 +203,7 @@ function showSampleDataWarning(isSample, lastUpdated) {
 }
 
 // 로딩 표시기 표시/숨기기
-function showLoadingIndicator(show) {
+function uiShowLoadingIndicator(show) {
     const loadingContainer = document.getElementById('loadingContainer');
     if (loadingContainer) {
         if (show) {
@@ -440,6 +440,6 @@ window.uiController = {
     initializeUI,
     showPropertyModal,
     updateFilterButtonsState,
-    showLoadingIndicator,
+    uiShowLoadingIndicator,
     updateDataSourceInfo
 }; 

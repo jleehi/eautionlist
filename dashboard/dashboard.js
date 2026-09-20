@@ -239,52 +239,31 @@ function handleMapLoadFailed() {
     }
 }
 
-// 필터 변경 핸들러
-function handleFilterChange() {
-    console.log('🔍 필터 변경 감지! 데이터를 필터링합니다...');
+// 매물 종류 버튼(.filter-btn)의 라벨 → 수집 데이터의 maemulinfo 에 들어가는 낱말
+const PROPERTY_TYPE_KEYWORDS = {
+    '아파트': ['아파트'],
+    '오피스텔': ['오피스텔'],
+    '주택/빌라': ['단독주택', '다가구주택', '다세대', '연립', '빌라'],
+    '상가/사무실': ['근린생활', '상가', '사무실', '업무시설'],
+    '토지': ['대지', '임야', '토지', '전', '답']
+};
+
+// 필터 변경 핸들러 (ui_controller 의 filterChanged 이벤트를 받는다)
+function handleFilterChange(event) {
+    const filter = (event && event.detail && event.detail.filter) || 'all';
+    console.log(`🔍 필터 변경 감지: ${filter}`);
     
-    // 필터 값 가져오기
-    const regionFilter = document.getElementById('regionFilter').value;
-    const priceRangeFilter = document.getElementById('priceRangeFilter').value;
-    const propertyTypeFilter = document.getElementById('propertyTypeFilter').value;
-    
-    // 필터링
-    filteredData = auctionData.filter(item => {
-        // 지역 필터
-        if (regionFilter !== 'all' && item.region !== regionFilter) {
-            return false;
-        }
-        
-        // 가격대 필터
-        if (priceRangeFilter !== 'all') {
-            const price = parseFloat(item.minBidPrice);
-            
-            switch (priceRangeFilter) {
-                case 'under1':
-                    if (price >= 10000) return false;
-                    break;
-                case '1to3':
-                    if (price < 10000 || price >= 30000) return false;
-                    break;
-                case '3to5':
-                    if (price < 30000 || price >= 50000) return false;
-                    break;
-                case '5to10':
-                    if (price < 50000 || price >= 100000) return false;
-                    break;
-                case 'over10':
-                    if (price < 100000) return false;
-                    break;
-            }
-        }
-        
-        // 매물 종류 필터
-        if (propertyTypeFilter !== 'all' && item.type !== propertyTypeFilter) {
-            return false;
-        }
-        
-        return true;
-    });
+    if (filter === 'all') {
+        filteredData = [...auctionData];
+    } else if (filter === '기타') {
+        const known = Object.values(PROPERTY_TYPE_KEYWORDS).flat();
+        filteredData = auctionData.filter(item =>
+            !known.some(keyword => (item.type || '').includes(keyword)));
+    } else {
+        const keywords = PROPERTY_TYPE_KEYWORDS[filter] || [filter];
+        filteredData = auctionData.filter(item =>
+            keywords.some(keyword => (item.type || '').includes(keyword)));
+    }
     
     console.log(`🔍 필터링 완료! ${filteredData.length}개의 매물이 선택되었습니다.`);
     
@@ -313,9 +292,6 @@ function updateDashboard() {
     // 경매 테이블 업데이트
     updateAuctionTable();
     
-    // 필터 옵션 업데이트
-    updateFilterOptions();
-    
     // 지도에 매물 표시
     displayPropertiesOnMap();
     
@@ -326,61 +302,56 @@ function updateDashboard() {
 function updateBasicStats() {
     console.log('📊 기본 통계 업데이트 시작...');
     
+    const prices = filteredData
+        .map(item => parseFloat(item.minBidPrice))
+        .filter(price => !isNaN(price) && price > 0);
+    
     // 총 매물 수
     document.getElementById('totalProperties').textContent = filteredData.length;
     
-    // 평균 감정가
-    const avgAppraisedValue = calculateAverage(filteredData, 'appraisedValue');
-    document.getElementById('avgAppraisedValue').textContent = formatCurrency(avgAppraisedValue);
+    // 평균 / 최저 / 최고 최저입찰가
+    const average = prices.length
+        ? prices.reduce((acc, price) => acc + price, 0) / prices.length
+        : 0;
+    document.getElementById('averagePrice').textContent = formatCurrency(average);
+    document.getElementById('lowestPrice').textContent =
+        prices.length ? formatCurrency(Math.min(...prices)) : '-';
+    document.getElementById('highestPrice').textContent =
+        prices.length ? formatCurrency(Math.max(...prices)) : '-';
     
-    // 평균 최저입찰가
-    const avgMinBidPrice = calculateAverage(filteredData, 'minBidPrice');
-    document.getElementById('avgMinBidPrice').textContent = formatCurrency(avgMinBidPrice);
-    
-    // 평균 할인율
-    const avgDiscountRate = calculateAverage(filteredData, 'discountRate');
-    document.getElementById('avgDiscountRate').textContent = avgDiscountRate.toFixed(1) + '%';
-    
-    // 마지막 업데이트 시간
-    const lastUpdated = new Date().toLocaleString();
-    document.getElementById('lastUpdated').textContent = `마지막 업데이트: ${lastUpdated}`;
-    document.getElementById('footerLastUpdated').textContent = lastUpdated;
+    // 마지막 업데이트 시간 — 화면을 연 시각이 아니라 데이터가 만들어진 시각
+    document.getElementById('lastUpdated').textContent = getDataTimestamp();
+    document.getElementById('footerLastUpdated').textContent = getDataTimestamp();
     
     console.log('✅ 기본 통계 업데이트 완료!');
 }
 
-// 평균 계산 함수
-function calculateAverage(data, property) {
-    if (!data || data.length === 0) return 0;
+// 데이터가 만들어진 시각 (없으면 알 수 없음으로 표기)
+function getDataTimestamp() {
+    const loader = window.dataLoader;
+    const data = loader && loader.getDashboardData ? loader.getDashboardData() : null;
     
-    const sum = data.reduce((acc, item) => {
-        const value = parseFloat(item[property]) || 0;
-        return acc + value;
-    }, 0);
-    
-    return sum / data.length;
+    return (data && data.last_updated) ? data.last_updated : '시각 정보 없음';
 }
 
-// 통화 포맷팅 함수
+// 통화 포맷팅 함수 (입력 단위: 원)
 function formatCurrency(value) {
-    if (value >= 10000) {
-        const billion = Math.floor(value / 10000);
-        const million = Math.round((value % 10000) / 100) / 10;
-        
-        if (million > 0) {
-            return `${billion}억 ${million}천만원`;
-        } else {
-            return `${billion}억원`;
-        }
-    } else {
-        return `${Math.round(value)}만원`;
+    const won = parseFloat(value);
+    if (isNaN(won) || won <= 0) return '정보없음';
+    
+    const billion = Math.floor(won / 100000000);
+    const million = Math.round((won % 100000000) / 10000);
+    
+    if (billion > 0) {
+        return million > 0 ? `${billion}억 ${million.toLocaleString()}만원` : `${billion}억원`;
     }
+    return `${million.toLocaleString()}만원`;
 }
 
 // 차트 업데이트
 function updateCharts() {
-    // 차트 렌더러 모듈 호출
-    window.chartRenderer.initializeCharts(filteredData);
+    // 차트 렌더러는 { data: [...] } 형태를 읽는다
+    window.chartRenderer.initializeCharts({ data: filteredData });
 }
 
 // 경매 테이블 업데이트
@@ -411,7 +382,7 @@ function updateAuctionTable() {
         const row = document.createElement('tr');
         
         // 할인율 계산
-        const discountRate = item.discountRate || 0;
+        const discountRate = parseFloat(item.discountRate) || 0;
         
         // 할인율에 따른 클래스 설정
         let discountClass = 'text-gray-900';
@@ -469,68 +440,6 @@ function formatDate(dateString) {
     }
     
     return date.toLocaleDateString();
-}
-
-// 필터 옵션 업데이트
-function updateFilterOptions() {
-    console.log('🔄 필터 옵션 업데이트 시작...');
-    
-    // 지역 필터 옵션
-    const regionFilter = document.getElementById('regionFilter');
-    const regions = [...new Set(auctionData.map(item => item.region).filter(Boolean))].sort();
-    
-    // 기존 옵션 유지하면서 추가
-    const currentRegion = regionFilter.value;
-    regionFilter.innerHTML = '<option value="all">전체 지역</option>';
-    
-    regions.forEach(region => {
-        const option = document.createElement('option');
-        option.value = region;
-        option.textContent = region;
-        
-        // 현재 선택된 값 유지
-        if (region === currentRegion) {
-            option.selected = true;
-        }
-        
-        regionFilter.appendChild(option);
-    });
-    
-    // 가격대 필터 옵션 (고정)
-    const priceRangeFilter = document.getElementById('priceRangeFilter');
-    const currentPriceRange = priceRangeFilter.value;
-    
-    priceRangeFilter.innerHTML = `
-        <option value="all">전체 가격대</option>
-        <option value="under1" ${currentPriceRange === 'under1' ? 'selected' : ''}>1억 미만</option>
-        <option value="1to3" ${currentPriceRange === '1to3' ? 'selected' : ''}>1억 ~ 3억</option>
-        <option value="3to5" ${currentPriceRange === '3to5' ? 'selected' : ''}>3억 ~ 5억</option>
-        <option value="5to10" ${currentPriceRange === '5to10' ? 'selected' : ''}>5억 ~ 10억</option>
-        <option value="over10" ${currentPriceRange === 'over10' ? 'selected' : ''}>10억 이상</option>
-    `;
-    
-    // 매물 종류 필터 옵션
-    const propertyTypeFilter = document.getElementById('propertyTypeFilter');
-    const propertyTypes = [...new Set(auctionData.map(item => item.type).filter(Boolean))].sort();
-    
-    // 기존 옵션 유지하면서 추가
-    const currentPropertyType = propertyTypeFilter.value;
-    propertyTypeFilter.innerHTML = '<option value="all">전체 종류</option>';
-    
-    propertyTypes.forEach(type => {
-        const option = document.createElement('option');
-        option.value = type;
-        option.textContent = type;
-        
-        // 현재 선택된 값 유지
-        if (type === currentPropertyType) {
-            option.selected = true;
-        }
-        
-        propertyTypeFilter.appendChild(option);
-    });
-    
-    console.log('✅ 필터 옵션 업데이트 완료!');
 }
 
 // 지도에 매물 표시

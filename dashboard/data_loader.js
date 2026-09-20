@@ -349,8 +349,38 @@ function formatPriceShort(price) {
     }
 }
 
+// 원본 경매 항목을 화면 모듈들이 쓰는 이름으로 정규화
+// 수집기는 minprice/estimatedprice/maemulinfo 같은 원본 필드명을 주는데,
+// dashboard.js 와 map_handler.js 는 camelCase 이름을 읽는다. 여기서 한 번만 맞춘다.
+function normalizeAuctionItems(data) {
+    if (!data || !Array.isArray(data.data)) return;
+
+    data.data.forEach(item => {
+        const minBid = parseFloat(item.minprice) || 0;
+        const appraised = parseFloat(item.estimatedprice) || 0;
+
+        item.minBidPrice = minBid;
+        item.appraisedValue = appraised;
+        item.discountRate = appraised > 0 ? (1 - minBid / appraised) * 100 : 0;
+        item.type = item.maemulinfo || '기타';
+        item.bidDate = item.auctiondate || '';
+        item.link = item.auctionmsg_url || item.specpdfurl || '';
+
+        // map_handler.js 가 읽는 이름
+        item.id = item.id || item.uid;
+        item.latitude = parseFloat(item.lat);
+        item.longitude = parseFloat(item.lng);
+        item.minPrice = minBid;
+        item.price = appraised;
+        item.auctionDate = item.bidDate;
+    });
+}
+
 // 로드된 데이터 처리
 function processLoadedData(data, callback) {
+    // 원본 필드명을 화면 모듈 기준으로 정규화
+    normalizeAuctionItems(data);
+
     // 데이터 전처리
     if (!data.last_updated) {
         const now = new Date();
@@ -450,7 +480,7 @@ function handleLoadFailure(callback) {
     } else {
         // 최대 시도 횟수 초과 시 오류 표시
         console.error('❌ 최대 시도 횟수 초과. 데이터 로드 실패.');
-        showError('데이터를 로드하는데 실패했습니다. 페이지를 새로고침하거나 나중에 다시 시도해 주세요.');
+        showDataLoadError('데이터를 로드하는데 실패했습니다. 페이지를 새로고침하거나 나중에 다시 시도해 주세요.');
         showLoadingIndicator(false);
         
         // 콜백 호출 (데이터 없이)
@@ -469,7 +499,7 @@ function showLoadingIndicator(show) {
 }
 
 // 오류 메시지 표시
-function showError(message) {
+function showDataLoadError(message) {
     const errorMessage = document.getElementById('errorMessage');
     const errorText = document.getElementById('errorText');
     

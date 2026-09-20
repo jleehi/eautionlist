@@ -589,7 +589,7 @@
     },
     "6억 이상": {
       "min": 600000000,
-      "max": Infinity,
+      "max": null,
       "count": 0,
       "items": []
     }
